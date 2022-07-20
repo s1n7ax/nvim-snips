@@ -7,7 +7,7 @@ to get an inspiration, personalize.
 
 * Register luasnips you want as follows.
 
-```
+```lua
 local ls = require("luasnip")
 local lua = require("snips.lua")
 local s = ls.s
