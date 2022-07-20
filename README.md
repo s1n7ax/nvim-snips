@@ -1,4 +1,4 @@
-# nvim-luasnips
+# nvim-snips
 
 These are my [LuaSnip](https://github.com/L3MON4D3/LuaSnip) snippets. Feel free
 to get an inspiration, personalize.
