@@ -39,4 +39,31 @@ ls.add_snippets("lua", {
 })
 ```
 
-Each supported language snips are available under `require("snips.<language_name>")`
+## Snippets
+
+### Lua
+
+Following are the snips under `require('snips.lua')`
+
+* `anonymous_func`
+* `func`
+* `func_with_doc`
+* `import`
+* `module`
+* `stdout`
+* `variable`
+
+### JavaScript
+
+Following are the snips under `require('snips.javascript')`
+
+* `func`
+* `stdout`
+
+# JavaScript + React
+
+Following are the snips under `require('snips.javascriptreact')`
+
+* `component`
+* `use_state`
+* `use_effect`
