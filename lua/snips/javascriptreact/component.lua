@@ -10,16 +10,18 @@ local t = ls.text_node
 local indentation = str.get_indent_str()
 local bt = str.box_trim_lines
 
-return fmt(
-  bt([[
+return function()
+  return fmt(
+    bt([[
     import React from "react";
 
     export default () => {{
       {}return({})
     }}
   ]]),
-  {
-    t(indentation),
-    i(1, '<></>'),
-  }
-)
+    {
+      t(indentation),
+      i(1, '<></>'),
+    }
+  )
+end

@@ -6,11 +6,13 @@ local c = ls.choice_node
 
 local input = i(1, 'value')
 
-return fmt('console.{}', {
-  c(1, {
-    fmt('log({})', { input }),
-    fmt('error({})', { input }),
-    fmt('info({})', { input }),
-    fmt('debug({})', { input }),
-  }),
-})
+return function()
+  return fmt('console.{}', {
+    c(1, {
+      fmt('log({})', { input }),
+      fmt('error({})', { input }),
+      fmt('info({})', { input }),
+      fmt('debug({})', { input }),
+    }),
+  })
+end

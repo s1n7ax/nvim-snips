@@ -8,15 +8,17 @@ local bt = str.box_trim_lines
 
 local indentation = str.get_indent_str()
 
-return fmt(
-  bt([[
-    function ({})
-      {}{}
-    end
-  ]]),
-  {
-    i(1),
-    t(indentation),
-    i(2),
-  }
-)
+return function()
+  return fmt(
+    bt([[
+      function ({})
+        {}{}
+      end
+    ]]),
+    {
+      i(1),
+      t(indentation),
+      i(2),
+    }
+  )
+end

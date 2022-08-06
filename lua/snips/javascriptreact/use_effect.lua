@@ -9,15 +9,17 @@ local t = ls.text_node
 local indentation = str.get_indent_str()
 local bt = str.box_trim_lines
 
-return fmt(
-  bt([[
-    useEffect(() => {{
-        {}{}
-    }}, [{}])
-  ]]),
-  {
-    t(indentation),
-    i(2),
-    i(1),
-  }
-)
+return function()
+  return fmt(
+    bt([[
+      useEffect(() => {{
+          {}{}
+      }}, [{}])
+    ]]),
+    {
+      t(indentation),
+      i(2),
+      i(1),
+    }
+  )
+end
