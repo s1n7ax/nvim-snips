@@ -3,7 +3,7 @@ local ls = require('luasnip')
 local fmt = require('luasnip.extras.fmt').fmt
 local str = require('snips.utils.str')
 
-local i = ls.insert_node
+-- local i = ls.insert_node
 local t = ls.text_node
 local c = ls.choice_node
 local r = ls.restore_node
@@ -22,9 +22,9 @@ return function()
         ]]),
         {
           r(1, 'name'),
-          i(2),
+          r(2, 'param'),
           t(indentation),
-          i(3),
+          r(3, 'body'),
         }
       ),
 
@@ -36,9 +36,9 @@ return function()
         ]]),
         {
           r(1, 'name'),
-          i(2),
+          r(2, 'param'),
           t(indentation),
-          i(3),
+          r(3, 'body'),
         }
       ),
     }),
