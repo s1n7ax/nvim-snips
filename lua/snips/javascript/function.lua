@@ -16,10 +16,10 @@ return function()
     c(1, {
       fmt(
         bt([[
-      const {} = ({}) => {{
-        {}{}
-      }}
-      ]]),
+          const {} = ({}) => {{
+            {}{}
+          }}
+        ]]),
         {
           r(1, 'name'),
           i(2),
@@ -30,10 +30,10 @@ return function()
 
       fmt(
         bt([[
-      function {}({}) {{
-        {}{}
-      }}
-      ]]),
+          function {}({}) {{
+            {}{}
+          }}
+        ]]),
         {
           r(1, 'name'),
           i(2),

@@ -19,6 +19,8 @@ local snippets = function()
                 value = i(1, 'value'),
             },
         }),
+        s('con', js.constructor()),
+        s('cl', js.class())
     }
 end
 

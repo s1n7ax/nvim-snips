@@ -11,12 +11,12 @@ local bt = str.box_trim_lines
 return function()
   return fmt(
     bt([[
-      constructor({}) {{
+      class {} {{
         {}{}
       }}
     ]]),
     {
-      i(1),
+      i(1, 'name'),
       t(indentation),
       i(2),
     }

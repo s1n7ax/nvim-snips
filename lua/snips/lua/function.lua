@@ -15,10 +15,10 @@ return function()
     c(1, {
       fmt(
         bt([[
-      function {}({})
-        {}{}
-      end
-      ]]),
+          function {}({})
+            {}{}
+          end
+        ]]),
         {
           r(1, 'name'),
           i(2),
@@ -29,9 +29,9 @@ return function()
 
       fmt(
         bt([[
-        local {} = function({})
-          {}{}
-        end
+          local {} = function({})
+            {}{}
+          end
         ]]),
         {
           r(1, 'name'),
