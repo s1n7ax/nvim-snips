@@ -1,14 +1,9 @@
 local M = {}
 
-function M:new(o)
-  o = o or {
-    tbl = {},
+function M:new(tbl)
+  local o = {
+    tbl = tbl or {},
   }
-
-  assert(
-    type(o.tbl) == 'table',
-    '"tbl" property should be present in the instance'
-  )
 
   setmetatable(o, self)
   self.__index = self

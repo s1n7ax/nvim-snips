@@ -63,10 +63,10 @@ local function get_doc_comment_snip()
 	end
 
 	local lines = comment_lines
-		:map(function(line)
-			return string.format('---%s', line)
-		end)
-		:concat('\n')
+			:map(function(line)
+				return string.format('---%s', line)
+			end)
+			:concat('\n')
 
 	return sn(nil, fmt(lines, snip_nodes.tbl))
 end
