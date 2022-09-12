@@ -22,11 +22,11 @@ return function()
     {
       i(1, 'name'),
       i(2, 'key'),
-      i(2, 'value'),
-      i(3, 'container_name'),
-      i(4, 'image'),
-      i(5, '1.0'),
-      i(6, '80'),
+      i(3, 'value'),
+      i(4, 'container_name'),
+      i(5, 'image'),
+      i(6, '1.0'),
+      i(7, '80'),
     }
   )
 end
