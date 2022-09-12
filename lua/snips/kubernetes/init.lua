@@ -4,7 +4,8 @@ local im = module_util.importer('snips.kubernetes')
 local M = {
   pod = im('pod'),
   replicaset = im('replicaset'),
-  deployment = im('deployment')
+  deployment = im('deployment'),
+  service = im('service'),
 }
 
 return M
