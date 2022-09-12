@@ -10,6 +10,8 @@ return function()
       kind: Pod
       metadata:
         name: {}
+        labels:
+          {}:{}
       spec:
         containers:
         - name: {}
@@ -19,10 +21,12 @@ return function()
     ]],
     {
       i(1, 'name'),
-      i(2, 'container_name'),
-      i(3, 'image'),
-      i(4, '1.0'),
-      i(5, '80'),
+      i(2, 'key'),
+      i(2, 'value'),
+      i(3, 'container_name'),
+      i(4, 'image'),
+      i(5, '1.0'),
+      i(6, '80'),
     }
   )
 end
