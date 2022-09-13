@@ -6,6 +6,7 @@ local fmt = require('luasnip.extras.fmt').fmt
 local i = ls.insert_node
 local c = ls.choice_node
 local t = ls.text_node
+local r = ls.restore_node
 
 local tl = su.box_trim_lines
 
@@ -17,14 +18,14 @@ return function()
     c(1, {
       fmt(
         tl([[
-                local {} = {{}}
-                
-                {}
+          local {} = {{}}
+          
+          {}
 
-                return {}
-            ]]),
+          return {}
+        ]]),
         {
-          i(1, 'M'),
+          r(1, 'name'),
           i(2),
           rep(1),
         }
@@ -32,21 +33,21 @@ return function()
 
       fmt(
         tl([[
-                local {} = {{}}
+          local {} = {{}}
 
-                function {}:new(o)
-                    {}o = o or {{}}
-                    {}setmetatable(o, self)
-                    {}self.__index = self
-                    {}return o
-                end
+          function {}:new(o)
+              {}o = o or {{}}
+              {}setmetatable(o, self)
+              {}self.__index = self
+              {}return o
+          end
 
-                {}
+          {}
 
-                return {}
-            ]]),
+          return {}
+        ]]),
         {
-          i(1, 'M'),
+          r(1, 'name'),
           rep(1),
           t(indentation),
           t(indentation),
