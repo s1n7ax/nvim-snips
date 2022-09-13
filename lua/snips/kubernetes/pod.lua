@@ -11,7 +11,7 @@ return function()
       metadata:
         name: {}
         labels:
-          {}:{}
+          {}: {}
       spec:
         containers:
         - name: {}
