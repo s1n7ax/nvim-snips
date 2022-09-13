@@ -19,7 +19,7 @@ local function get_port_snip(args)
   end
 
   local type = args[1][1]
-  local indent = string.rep(indentation, 3)
+  local indent = '      '
 
   if type == 'NodePort' or type == 'LoadBalancer' then
     return sn(
@@ -70,7 +70,7 @@ return function()
             {}
         spec:
           selector:
-              {}
+            {}
           type: {}
           ports:
             {}
