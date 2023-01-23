@@ -3,8 +3,10 @@ local im = module_util.importer('snips.lua')
 
 local M = {
   anonymous_func = im('anonymous_function'),
+  noarg_anonymous_func = im('noarg_anonymous_function'),
   import = im('import'),
   stdout = im('stdout'),
+  pretty_print = im('pretty_print'),
 
   ----------------------------------------------------------------------
   --                              choice                              --
