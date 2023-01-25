@@ -1,26 +1,28 @@
-local module_util = require('snips.utils.module')
-local im = module_util.importer('snips.javascript')
+local mu = require('snips.utils.module')
+local ip = mu.importer('snips.javascript.primitives')
+local ic = mu.importer('snips.javascript.choices')
+local id = mu.importer('snips.javascript.dynamic')
 
 local M = {
-  class = im('class'),
-  constructor = im('constructor'),
-  method = im('method'),
-  declarative_function = im('declarative_function'),
-  lexical_declarative_arrow_function = im('lexical_declarative_arrow_function'),
-  inline_anonymous_function = im('inline_anonymous_function'),
-  multiline_anonymous_function = im('multiline_anonymous_function'),
+  primitives = {
+    class = ip('class'),
+    constructor = ip('constructor'),
+    method = ip('method'),
+    declarative_func = ip('declarative_func'),
+    lexical_declarative_arrow_func = ip('lexical_declarative_arrow_func'),
+    inline_anonymous_func = ip('inline_anonymous_func'),
+    multiline_anonymous_func = ip('multiline_anonymous_func'),
+  },
 
-  ----------------------------------------------------------------------
-  --                              choice                              --
-  ----------------------------------------------------------------------
-  stdout_choice = im('stdout_choice'),
-  function_choice = im('function_choice'),
-  anonymous_function_choice = im('anonymous_function_choice'),
+  choices = {
+    stdout = ic('stdout'),
+    func = ic('func'),
+    anonymous_func = ic('anonymous_func'),
+  },
 
-  ----------------------------------------------------------------------
-  --                             context                              --
-  ----------------------------------------------------------------------
-  function_context = im('function_context'),
+  dynamic = {
+    func = id('func'),
+  }
 }
 
 return M

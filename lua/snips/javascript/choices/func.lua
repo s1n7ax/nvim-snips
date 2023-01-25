@@ -1,8 +1,11 @@
+local mu = require('snips.utils.module')
+local ip = mu.importer('snips.javascript.primitives')
+
 local ls = require('luasnip')
-local lexical_declarative_arrow_function = require(
-  'snips.javascript.lexical_declarative_arrow_function'
-)
-local declarative_function = require('snips.javascript.declarative_function')
+
+
+local lexical_declarative_arrow_function = ip('lexical_declarative_arrow_func')
+local declarative_function = ip('declarative_func')
 
 local fmt = require('luasnip.extras.fmt').fmt
 

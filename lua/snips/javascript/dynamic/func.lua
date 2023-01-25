@@ -1,15 +1,15 @@
+local mu = require('snips.utils.module')
+local ic = mu.importer('snips.javascript.choices')
+local ip = mu.importer('snips.javascript.primitives')
+
 local ls = require('luasnip')
 local JSTS = require('ts-utils.javascript')
 local List = require('snips.utils.list')
 
-local anonymous_function_choice = require(
-  'snips.javascript.anonymous_function_choice'
-)
-local lexical_declarative_arrow_function = require(
-  'snips.javascript.lexical_declarative_arrow_function'
-)
+local anonymous_function_choice = ic('anonymous_func')
+local lexical_declarative_arrow_function = ip('lexical_declarative_arrow_func')
+local method = ip('method')
 
-local method = require('snips.javascript.method')
 local fmt = require('luasnip.extras.fmt').fmt
 
 local sn = ls.sn

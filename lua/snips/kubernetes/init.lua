@@ -1,11 +1,13 @@
 local module_util = require('snips.utils.module')
-local im = module_util.importer('snips.kubernetes')
+local ip = module_util.importer('snips.kubernetes.primitives')
 
 local M = {
-  pod = im('pod'),
-  replicaset = im('replicaset'),
-  deployment = im('deployment'),
-  service = im('service'),
+  primitives = {
+    pod = ip('pod'),
+    replicaset = ip('replicaset'),
+    deployment = ip('deployment'),
+    service = ip('service'),
+  }
 }
 
 return M

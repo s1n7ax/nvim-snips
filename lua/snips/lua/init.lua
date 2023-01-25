@@ -1,20 +1,22 @@
 local module_util = require('snips.utils.module')
-local im = module_util.importer('snips.lua')
+local ip = module_util.importer('snips.lua.primitives')
+local ic = module_util.importer('snips.lua.choices')
 
 local M = {
-  anonymous_func = im('anonymous_function'),
-  noarg_anonymous_func = im('noarg_anonymous_function'),
-  import = im('import'),
-  stdout = im('stdout'),
-  pretty_print = im('pretty_print'),
+  primitives = {
+    anonymous_func = ip('anonymous_func'),
+    noarg_anonymous_func = ip('noarg_anonymous_func'),
+    import = ip('import'),
+    stdout = ip('stdout'),
+    pretty_print = ip('pretty_print'),
+  },
 
-  ----------------------------------------------------------------------
-  --                              choice                              --
-  ----------------------------------------------------------------------
-  function_choice = im('function_choice'),
-  func_with_doc_choice = im('function_with_doc_choice'),
-  module_choice = im('module_choice'),
-  variable_choice = im('variable_choice'),
+  choices = {
+    func = ic('func'),
+    func_with_doc = ic('func_with_doc'),
+    module = ic('module'),
+    variable = ic('variable'),
+  }
 }
 
 return M
