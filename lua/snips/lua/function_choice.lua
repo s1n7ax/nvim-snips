@@ -14,7 +14,20 @@ return function()
     c(1, {
       fmt(
         bt([[
-          function {}({})
+          function M:{}({})
+            {}{}
+          end
+        ]]),
+        {
+          r(1, 'name'),
+          r(2, 'param'),
+          t(indentation),
+          r(3, 'body'),
+        }
+      ),
+      fmt(
+        bt([[
+          local function {}({})
             {}{}
           end
         ]]),
