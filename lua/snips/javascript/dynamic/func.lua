@@ -20,12 +20,12 @@ local js_ts = JSTS:new()
 local get_snip = function()
   js_ts:refresh()
 
-  ---@diagnostic disable-next-line: undefined-global
-  local row, column = table.unpack(vim.api.nvim_win_get_cursor(0))
+  local cursor = vim.api.nvim_win_get_cursor(0)
+
+  local row, column = cursor[1], cursor[2]
 
   row = row - 1
 
-  ---@diagnostic disable-next-line: undefined-global
   if vim.fn.mode() == 'i' and column > 0 then
     column = column - 1
   end
