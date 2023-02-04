@@ -9,6 +9,8 @@ local M = {
     import = ip('import'),
     stdout = ip('stdout'),
     pretty_print = ip('pretty_print'),
+    test_desc = ip('test_desc'),
+    test_it = ip('test_it'),
   },
 
   choices = {
