@@ -5,7 +5,7 @@ local f = ls.function_node
 local fmt = require('luasnip.extras.fmt').fmt
 
 return function()
-  return fmt('print!("{}{}"{});', {
+  return fmt('println!("{}{}"{});', {
     i(1),
     f(function(values)
       local param_str = values[1][1]
