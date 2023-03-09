@@ -18,7 +18,7 @@ local M = {
     func_with_doc = ic('func_with_doc'),
     module = ic('module'),
     variable = ic('variable'),
-  }
+  },
 }
 
 return M
