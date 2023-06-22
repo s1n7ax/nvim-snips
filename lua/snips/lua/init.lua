@@ -1,6 +1,7 @@
 local module_util = require('snips.utils.module')
 local ip = module_util.importer('snips.lua.primitives')
 local ic = module_util.importer('snips.lua.choices')
+local id = module_util.importer('snips.lua.dynamic')
 
 local M = {
   primitives = {
@@ -18,6 +19,10 @@ local M = {
     func_with_doc = ic('func_with_doc'),
     module = ic('module'),
     variable = ic('variable'),
+  },
+
+  dynamic = {
+    variable = id('variable'),
   },
 }
 
