@@ -1,3 +1,6 @@
+local cwd = vim.fn.getcwd()
+vim.opt.runtimepath:prepend(cwd)
+
 --[[
 -- plugin name will be used to reload the loaded modules
 --]]
