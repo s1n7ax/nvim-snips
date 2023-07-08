@@ -1,5 +1,5 @@
 local ls = require('luasnip')
-local su = require('nvim.utils.lua.string')
+local su = require('snips.utils.string')
 
 local rep = require('luasnip.extras').rep
 local fmt = require('luasnip.extras.fmt').fmt
@@ -10,8 +10,7 @@ local r = ls.restore_node
 
 local tl = su.box_trim_lines
 
----@diagnostic disable-next-line: undefined-global
-local indentation = su.get_space_str(vim.opt.softtabstop:get())
+local indentation = string.rep(' ', vim.opt.softtabstop:get())
 
 return function()
   return fmt('{}', {
@@ -19,7 +18,7 @@ return function()
       fmt(
         tl([[
           local {} = {{}}
-          
+
           {}
 
           return {}
