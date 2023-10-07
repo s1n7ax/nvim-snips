@@ -5,6 +5,7 @@ local ic = module_util.importer('snips.bash.choices')
 local M = {
 	primitives = {
 		default_flags = ip('default_flags'),
+		func = ip('function'),
 	},
 
 	choices = {
