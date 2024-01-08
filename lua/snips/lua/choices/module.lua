@@ -19,7 +19,7 @@ return function()
 					return {}
 				]],
 				{
-					r(1, 'name'),
+					r(1, 'name', i(1, 'name')),
 					i(2),
 					rep(1),
 				}
