@@ -4,15 +4,8 @@ local fmt = require('luasnip.extras.fmt').fmt
 local i = ls.insert_node
 
 return function()
-	return fmt(
-		[[
-			class {} {{
-				{}
-			}}
-		]],
-		{
-			i(1, 'Name'),
-			i(2),
-		}
-	)
+	return fmt("expect('{}').to{}", {
+		i(1, 'actual'),
+		i(2),
+	})
 end

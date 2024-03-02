@@ -1,6 +1,5 @@
 local ls = require('luasnip')
 local fmt = require('luasnip.extras.fmt').fmt
-local str = require('snips.utils.str')
 local num = require('snips.utils.number')
 local LuaTS = require('ts-utils.lua')
 local List = require('snips.utils.list')
@@ -13,9 +12,6 @@ local c = ls.choice_node
 local d = ls.dynamic_node
 local r = ls.restore_node
 
-local bt = str.box_trim_lines
-
-local indentation = str.get_indent_str()
 local lua_ts = LuaTS:new()
 
 local function get_doc_comment_snip()
@@ -75,47 +71,44 @@ return function()
 	return fmt('{}', {
 		c(1, {
 			fmt(
-				bt([[
+				[[
 					{}
 					function {}({})
-					  {}{}
+						{}
 					end
-				]]),
+				]],
 				{
 					d(4, get_doc_comment_snip, { 1, 2, 3 }),
 					r(1, 'name', i(1, 'name')),
 					i(2),
-					t(indentation),
 					i(3),
 				}
 			),
 			fmt(
-				bt([[
+				[[
 					{}
 					local function {}({})
-					  {}{}
+						{}
 					end
-				]]),
+				]],
 				{
 					d(4, get_doc_comment_snip, { 1, 2, 3 }),
 					r(1, 'name'),
 					i(2),
-					t(indentation),
 					i(3),
 				}
 			),
 			fmt(
-				bt([[
+				[[
 					{}
 					local {} = function({})
-					  {}{}
+						{}
 					end
-				]]),
+				]],
 				{
 					d(4, get_doc_comment_snip, { 1, 2, 3 }),
 					r(1, 'name'),
 					i(2),
-					t(indentation),
 					i(3),
 				}
 			),

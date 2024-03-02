@@ -6,6 +6,14 @@ local id = mu.importer('snips.javascript.dynamic')
 local M = {
 	primitives = {
 		class = ip('class'),
+
+		variable = ip('variable'),
+		constant_variable = ip('constant_variable'),
+
+		describe = ip('describe'),
+		test = ip('test'),
+		expect = ip('expect'),
+
 		constructor = ip('constructor'),
 		method = ip('method'),
 		declarative_func = ip('declarative_func'),
@@ -15,6 +23,7 @@ local M = {
 	},
 
 	choices = {
+		variable = ic('variable'),
 		stdout = ic('stdout'),
 		func = ic('func'),
 		anonymous_func = ic('anonymous_func'),
