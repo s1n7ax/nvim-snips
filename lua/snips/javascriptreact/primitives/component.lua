@@ -9,12 +9,13 @@ return function()
 		[[
 		import React from "react";
 
-		export default () => {{
+		export default function {}() {{
 			return({})
 		}}
 		]],
 		{
-			i(1, '<></>'),
+			i(1, 'Name'),
+			i(2, ''),
 		}
 	)
 end

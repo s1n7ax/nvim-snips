@@ -10,10 +10,10 @@ local fmt = require('luasnip.extras.fmt').fmt
 local c = ls.choice_node
 
 return function()
-  return fmt('{}', {
-    c(1, {
-      inline_anonymous_function(),
-      multiline_anonymous_function(),
-    }),
-  })
+	return fmt('{}', {
+		c(1, {
+			multiline_anonymous_function(),
+			inline_anonymous_function(),
+		}),
+	})
 end
