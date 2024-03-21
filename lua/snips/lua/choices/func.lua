@@ -11,9 +11,9 @@ return function()
 		c(1, {
 			fmt(
 				[[
-          function M:{}({})
-						{}
-          end
+				function M:{}({})
+					{}
+				end
         ]],
 				{
 					r(1, 'name', i(1, 'name')),
@@ -23,9 +23,9 @@ return function()
 			),
 			fmt(
 				[[
-          function M.{}({})
-						{}
-          end
+				function M.{}({})
+					{}
+				end
         ]],
 				{
 					r(1, 'name'),
@@ -35,9 +35,9 @@ return function()
 			),
 			fmt(
 				[[
-					local function {}({})
-						{}
-					end
+				local function {}({})
+					{}
+				end
 				]],
 				{
 					r(1, 'name'),
@@ -48,9 +48,9 @@ return function()
 
 			fmt(
 				[[
-					local {} = function({})
-						{}
-					end
+				local {} = function({})
+					{}
+				end
 				]],
 				{
 					r(1, 'name'),
