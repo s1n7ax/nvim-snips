@@ -4,7 +4,6 @@ local TSReact = require('ts-utils.typescriptreact')
 local fmt = require('luasnip.extras.fmt').fmt
 
 local i = ls.insert_node
-local f = ls.function_node
 local t = ls.text_node
 local d = ls.dynamic_node
 local sn = ls.snippet_node
@@ -20,7 +19,7 @@ return function()
 				1,
 				fmt(
 					[[
-					export interface {}Prop {{
+					export interface {}Props {{
 						{}
 					}}
 					]],
@@ -35,7 +34,7 @@ return function()
 				1,
 				fmt(
 					[[
-					export interface {}Prop {{
+					export interface {}Props {{
 						{}
 					}}
 					]],

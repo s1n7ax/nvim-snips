@@ -17,17 +17,13 @@ return function()
 		]],
 		{
 			f(function()
-				vim.print('>>>', ts_react:has_react_import())
-
 				if not ts_react:has_react_import() then
-					return {
+					vim.api.nvim_buf_set_lines(0, 0, 0, true, {
 						'import React from "react"',
-						'',
-						'',
-					}
+					})
 				end
 
-				return ''
+				return {}
 			end, {}),
 			i(1, 'Name'),
 			i(2, ''),
