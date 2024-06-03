@@ -15,6 +15,17 @@ return function()
 		local cmp_name = ts_react:get_component_name()
 
 		if cmp_name then
+			local s_row, s_col, e_row, e_col = ts_react:component_prop_range()
+
+			vim.api.nvim_buf_set_text(
+				0,
+				s_row,
+				s_col + 1,
+				e_row,
+				e_col - 1,
+				{ string.format('{}: %sProps', cmp_name) }
+			)
+
 			return sn(
 				1,
 				fmt(
