@@ -5,7 +5,6 @@ local fmt = require('luasnip.extras.fmt').fmt
 
 local i = ls.insert_node
 local f = ls.function_node
-local t = ls.text_node
 
 local ts_react = TSReact:new()
 
@@ -27,7 +26,9 @@ return function()
 
 				return {}
 			end, {}),
-			t(vim.fn.expand('%:t:r')),
+			f(function()
+				return vim.fn.expand('%:t:r')
+			end),
 			i(1, ''),
 		}
 	)
