@@ -9,7 +9,7 @@ local d = ls.dynamic_node
 
 local function get_port_snip(args)
 	if #args < 1 and not args[1][1] then
-		return sn(nil, t('hello world'))
+		return sn(nil, t(''))
 	end
 
 	local type = args[1][1]
@@ -52,19 +52,19 @@ end
 return function()
 	return fmt(
 		[[
-        apiVersion: v1
-        kind: Service
-        metadata:
-					name: {}
-					labels:
-						{}
-        spec:
-					selector:
-						{}
-					type: {}
-					ports:
-						{}
-        ]],
+		apiVersion: v1
+		kind: Service
+		metadata:
+			name: {}
+			labels:
+				{}
+		spec:
+			selector:
+				{}
+			type: {}
+			ports:
+				{}
+		]],
 		{
 			i(1, 'name'),
 			i(2),
