@@ -1,6 +1,6 @@
 local mu = require('snips.utils.module')
-local ip = mu.importer('snips.javascriptreact.primitives')
-local id = mu.importer('snips.javascriptreact.dynamic')
+local ip = mu.importer('snips.typescriptreact.primitives')
+local id = mu.importer('snips.typescriptreact.dynamic')
 
 local M = {
 	primitives = {
