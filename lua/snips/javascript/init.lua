@@ -23,6 +23,8 @@ local M = {
 		undefined = ip('undefined'),
 		if_cond = ip('if'),
 		export = ip('export'),
+		async = ip('async'),
+		await = ip('await'),
 	},
 
 	choices = {
