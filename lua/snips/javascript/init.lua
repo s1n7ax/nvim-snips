@@ -25,6 +25,7 @@ local M = {
 		export = ip('export'),
 		async = ip('async'),
 		await = ip('await'),
+		new_promise = ip('new_promise'),
 	},
 
 	choices = {
