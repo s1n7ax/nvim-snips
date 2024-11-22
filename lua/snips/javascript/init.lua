@@ -20,6 +20,9 @@ local M = {
 		lexical_declarative_arrow_func = ip('lexical_declarative_arrow_func'),
 		inline_anonymous_func = ip('inline_anonymous_func'),
 		multiline_anonymous_func = ip('multiline_anonymous_func'),
+		undefined = ip('undefined'),
+		if_cond = ip('if'),
+		export = ip('export'),
 	},
 
 	choices = {
